@@ -8,3 +8,9 @@ Projects Completed:
 1. Armor Wars (Website)
 2. Frontier Books (Website)
 3. Portfolio Website
+
+1. Armor Wars
+
+2. Frontier Books: A website for selling books made using Visual Studio Code.
+
+3. Portfolio Website: A portfolio website made using Visual Studio Code and utilizing HTML and CSS.
