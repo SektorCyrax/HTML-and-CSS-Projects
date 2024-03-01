@@ -1,16 +1,13 @@
 <!-- Images used to open the lightbox -->
 <div class="row">
   <div class="column">
-    <img src="img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    <img src="thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    <img src="thumbnail_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
   </div>
   <div class="column">
-    <img src="img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="img4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    <img src="thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
   </div>
 </div>
 
@@ -50,15 +47,15 @@
 
     <!-- Thumbnail image controls -->
     <div class="column">
-      <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+      <img class="demo" src="thumnail_1.jpg" onclick="currentSlide(1)" alt="Armor 1">
     </div>
 
     <div class="column">
-      <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+      <img class="demo" src="thumbnail_2.jpg" onclick="currentSlide(2)" alt="Armor 2">
     </div>
 
     <div class="column">
-      <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+      <img class="demo" src="thumbnail_3.jpg" onclick="currentSlide(3)" alt="Armor 3">
     </div>
 
     <div class="column">
