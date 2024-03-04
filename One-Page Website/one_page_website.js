@@ -1,4 +1,3 @@
-<!-- Images used to open the lightbox -->
 <div class="row">
   <div class="column">
     <img src="thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
@@ -11,7 +10,6 @@
   </div>
 </div>
 
-<!-- The Modal/Lightbox -->
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
@@ -36,16 +34,13 @@
       <img src="img4_wide.jpg" style="width:100%">
     </div>
 
-    <!-- Next/previous controls -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-    <!-- Caption text -->
     <div class="caption-container">
       <p id="caption"></p>
     </div>
 
-    <!-- Thumbnail image controls -->
     <div class="column">
       <img class="demo" src="thumnail_1.jpg" onclick="currentSlide(1)" alt="Armor 1">
     </div>
