@@ -1,228 +1,225 @@
-<div class="row">
-  <div class="column">
-    <img src="./images/thumbs/thumbnail_1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+<body>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    body {
+      margin: 0;
+    }
+    
+    .preview {
+      width: 100%;
+    }
+    
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .row > .col {
+      padding: 0 8px;
+    }
+    
+    .col {
+      float: left;
+      width: 25%;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding: 10px 62px 0px 62px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+    }
+    
+    .modal-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      padding: 0 0 0 0;
+      width: 80%;
+      max-width: 1200px;
+    }
+    
+    .slide {
+      display: none;
+    }
+    
+    .image-slide {
+    	width: 100%;
+    }
+    
+    .modal-preview {
+    	width: 100%;
+    }
+    
+    .dots {
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+    }
+    
+    img.preview, img.modal-preview {
+      opacity: 0.6;
+    }
+    
+    img.active,
+    .preview:hover,
+    .modal-preview:hover {
+      opacity: 1;
+    }
+    
+    img.hover-shadow {
+      transition: 0.3s;
+    }
+    
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    } 
+    
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .previous,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .previous:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+  <div class="row">
+    <div class="col">
+       <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Toy car on the road." />
+    </div>
+    <div class="col">
+       <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="Toy car exploring offroad." />
+    </div>
+    <div class="col">
+       <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="Toy car in the city" />
+    </div>
   </div>
-  <div class="column">
-    <img src="./images/thumbs/thumbnail_2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  
+  <div id="Lightbox" class="modal">
+  
+    <span class="close pointer" onclick="closeLightbox()">&times;</span>
+    <div class="modal-content">
+      <div class="slide">
+        <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" class="image-slide" alt="Toy car on the road." />
+      </div>
+      <div class="slide">
+        <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="image-slide" alt="Toy car exploring offroad." />
+      </div>    
+      <div class="slide">
+        <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="image-slide" alt="Toy car in the city." />
+      </div>
+    
+      <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+          
+      <div class="dots">
+        <div class="col">
+          <img src="https://static.pexels.com/photos/385997/pexels-photo-385997.jpeg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="Toy car on the road." />
+        </div>
+        <div class="col">
+          <img src="https://static.pexels.com/photos/574521/pexels-photo-574521.jpeg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="Toy car exploring offroad." />
+        </div>
+        <div class="col">
+          <img src="https://static.pexels.com/photos/386009/pexels-photo-386009.jpeg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Toy car in the city" />
+        </div>
+      </div>
+    </div> 
   </div>
-  <div class="column">
-    <img src="./images/thumbs/thumbnail_3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="./images/thumbs/thumbnail_4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="./images/thumbs/thumbnail_5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
-  </div>
-</div>
+  
+  <script>
+    let slideIndex = 1;
+    showSlide(slideIndex);
+    
+    function openLightbox() {
+      document.getElementById('Lightbox').style.display = 'block';
+    };
+    
+    function closeLightbox() {
+      document.getElementById('Lightbox').style.display = 'none';
+    };
+    
+    function changeSlide(n) {
+      showSlide(slideIndex += n);
+    };
+    
+    function toSlide(n) {
+      showSlide(slideIndex = n);
+    };
+    
+    function showSlide(n) {
+      const slides = document.getElementsByClassName('slide');
+      let modalPreviews = document.getElementsByClassName('modal-preview');
+    
+      if (n > slides.length) {
+        slideIndex = 1;	
+      };
+      
+      if (n < 1) {
+        slideIndex = slides.length;
+      };
+    
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      };
+      
+      for (let i = 0; i < modalPreviews.length; i++) {
+        modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+      };
+      
+      slides[slideIndex - 1].style.display = 'block';
+      modalPreviews[slideIndex - 1].className += ' active';
+    };
+  </script>
+</body>
 
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 5</div>
-      <img src="img1_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 5</div>
-      <img src="img2_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 5</div>
-      <img src="img3_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 5</div>
-      <img src="img4_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="img5_wide.jpg" style="width:100%>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <div class="column">
-      <img class="demo" src="./images/thumbs/thumbnail_1.jpg" onclick="currentSlide(1)" alt="Armor 1">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="./images/thumbs/thumbnail_2.jpg" onclick="currentSlide(2)" alt="Armor 2">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="./images/thumbs/thumbnail_3.jpg" onclick="currentSlide(3)" alt="Armor 3">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="./images/thumbs/thumbnail_4.jpg" onclick="currentSlide(4)" alt="Armor 4">
-    </div>
-
-    <div class="column">
-      img class="demo" src="./images/thumbs/thumbnail_5.jpg" onclick="currentSlide(5)" alt="Armor 5">
-  </div>
-</div>
-
-.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column {
-  float: left;
-  width: 25%;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.mySlides {
-  display: none;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
-}
-
-img.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-<script>
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
