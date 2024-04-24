@@ -144,20 +144,20 @@ img.hover-shadow {
 </style>
 <body>
 
-<h2 style="text-align:center">Lightbox</h2>
+<h2 style="text-align:center">Armor</h2>
 
 <div class="row">
   <div class="column">
-    <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <img src="./images/thumbs/thumbnail_1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <img src="./images/thumbs/thumbnail_2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <img src="./images/thumbs/thumbnail_3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <img src="./images/thumbs/thumbnail_4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
   </div>
 </div>
 
@@ -167,22 +167,22 @@ img.hover-shadow {
 
     <div class="mySlides">
       <div class="numbertext">1 / 4</div>
-      <img src="img_nature_wide.jpg" style="width:100%">
+      <img src="./images/thumbs/thumbnail_1.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 4</div>
-      <img src="img_snow_wide.jpg" style="width:100%">
+      <img src="./images/thumbs/thumbnail_2.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 4</div>
-      <img src="img_mountains_wide.jpg" style="width:100%">
+      <img src="i./images/thumbs/thumbnail_3.jpg" style="width:100%">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">4 / 4</div>
-      <img src="img_lights_wide.jpg" style="width:100%">
+      <img src="./images/thumbs/thumbnail_4.jpg" style="width:100%">
     </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -192,26 +192,6 @@ img.hover-shadow {
       <p id="caption"></p>
     </div>
 
-
-    <div class="column">
-      <img class="demo cursor" src="./images/thumbs/thumbnail_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Armor 1">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images/thumbs/thumbnail_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Armor 2">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images/thumbs/thumbnail_3.jpg"style="width:100%" onclick="currentSlide(3)" alt="Amror 3">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images/thumbs/thumbnail_4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Armor 4">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="./images/thumbs/thumbnail_5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Armor 5">
-    </div>	
-  </div>
-</div>
-
-<script>
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
@@ -248,7 +228,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
-</script>
 
 	<p><a href = "#Home" id = link">Home</a></p>
 	<p><a href = "#Armors" id >Armors</a></p>
