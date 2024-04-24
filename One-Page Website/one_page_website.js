@@ -13,6 +13,7 @@
 		<header>
 			<h1><em><center>Armor Wars</em></h1>
 		</header>
+		<style>
 		{
   box-sizing: border-box;
 }
@@ -32,7 +33,6 @@
   width: 25%;
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -46,7 +46,6 @@
   background-color: black;
 }
 
-/* Modal Content */
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -56,7 +55,6 @@
   max-width: 1200px;
 }
 
-/* The Close Button */
 .close {
   color: white;
   position: absolute;
@@ -81,7 +79,6 @@
   cursor: pointer;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -99,19 +96,16 @@
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
